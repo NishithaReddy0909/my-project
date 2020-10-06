@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="backcolor"></div>
+  <div class="row">
+    <div class="col-lg-6"></div>
+    <div class="col-lg-8 border border-fuchsia rounded-sm shadow-lg" style="padding:30px;background-color:aquamarine">
+      <div class="form-group row">
+        <label class="col-lg-6">User Id</label>
+        <div class="col-mid-5">
+          <input type="text" class="form-inline" [(ngModel)]="userid">
+
+        </div>
+      </div>
+      <div class="form-group row">
+        <label  class="col-lg-6">Password</label>
+        <div class="col-mid-5">
+          <input type="Password" class=" form-inine" [(ngModel)]="password">
+        </div>
+      </div>
+      <div class="text-center">
+        <button class=" btn btn btn-ouline-success" (click)="onvalidate()">Sign In</button>
+      </div>
+      <div class="text-lg-center">
+        <label [ngStyle]="{backgroundColor:getStatus()}"
+        [ngClass]="{login:isValid(),fail:isValid()==false}" >{{status}}</label>
+      </div>
+    </div>
+  </div>
+</div>

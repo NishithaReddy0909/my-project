@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="row">
+    <div class="col-5">
+      {{getitle()}}
+    </div>
+  </div>
+  <div class="col-row">
+    <div class="col-4"></div>
+    <div class="col-4">
+      {{title}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4"></div>
+    <div class=col-4>
+      <ol class="list-group">
+        <li class="list-group-item list-group-item-action" *ngFor="let item of products">
+          {{item}}
+        </li>
+      </ol>
+    </div>
+    <div class="col-lg-4">
+      <img src={{imgsrc}} width="300" height="300">
+      <!--<img src={{imgonline}}>-->
+    </div>
+    <!-- <div>
+          <img src={{imgonline}} width="300" height="300">
+        </div> -->
+  </div>
+  <div class="row">
+    <div class="col-lg-7">
+      <input type="text" class="form-control" [(ngModel)]="newproduct" >
+      <label>New Product name is:{{newproduct}}</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="form-inline">
+        <label>Enter new Product</label>
+        <!-- <input type="text" class="form-inline" #project (keyup.enter)="onkeyup(project.value)"> -->
+      </div>
+
+      <button  (click)="onclick()" class="btn btn btn-outline-warning" >Click Here </button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-5" (click)="parent()">
+      <button class="btn btn btn-outline-warning" (click)="onresetclick($event)">Reset</button>
+    </div>
+    <div class="btn btn btn-outline-warning" (blur)="onsubmitblur()">Submit</div>
+  </div>
+</div>
+
+
+
+
